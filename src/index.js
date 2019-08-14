@@ -8,13 +8,13 @@ import "./styles.scss";
 // Redux Setup
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { carSalesReducer } from "./reducers";
+import { carReducer } from "./reducers";
 
 // Redux Tools
 
 // created Store
-const store = createStore(
-  carSalesReducer,
+export const store = createStore(
+  carReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

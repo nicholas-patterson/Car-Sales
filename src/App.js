@@ -13,11 +13,11 @@ import { connect } from "react-redux";
 
 const App = props => {
   const removeFeature = item => {
-    deleteFeature(item);
+    props.deleteFeature(item);
   };
 
   const buyItem = item => {
-    addFeature(item);
+    props.addFeature(item);
   };
 
   return (
@@ -45,5 +45,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { addFeature }
+  { addFeature, deleteFeature }
 )(App);
